@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class armstrong
+{
+    static void main()
+    {
+int sum=0, b,a, i,n;
+         Scanner sc = new Scanner(System.in);
+         System.out.println("Enter the number to find armstrong number");
+         b = sc.nextInt();
+
+         System.out.println("Your entered number is of how many digits");
+         n = sc.nextInt();
+         i = b;
+
+         while(i!=0) 
+         {
+              a=i%10;
+              i=i/10;
+              sum = sum + power(a,n);
+         }
+
+         if(b==sum)
+         {
+               System.out.println(b +" is armstrong number"); 
+         } 
+         else 
+         {
+               System.out.println(b +" is not an armstrong number");
+         }
+    }
+    

@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Largest_digit
+{ 
+    static void main()
+    {
+        Scanner sc=new Scanner(System.in);
+        int x,m,rev=0,d,y,l,t;
+        int a[]=new int [5];
+        System.out.println("enter the no.=");
+        for(x=0;x<5;x++)
+        {
+            a[x]=sc.nextInt();
+        } 
+        for(x=0;x<5;x++)
+        {
+            l=0;
+            t=a[x];
+            while(a[x]!=0)
+            {
+                d=a[x]%10;
+                a[x]=a[x]/10;
+                if(d>l)
+                {
+                    l=d;
+                }
+            }
+            System.out.println("the Largest no.="+l);
+        }
+    }
+}

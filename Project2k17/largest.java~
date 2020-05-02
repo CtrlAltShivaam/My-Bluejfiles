@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class largest
+{ 
+    static void main()
+    {
+        Scanner sc=new Scanner(System.in);
+        int x,d,rev=0,l=0,k;
+        int a[]=new int [5];
+        System.out.println("enter the no.=");
+        for(x=0;x<5;x++)
+        {
+            a[x]=sc.nextInt();
+            k=a[x];
+            while(k!=0)
+            {
+                d=k%10;//1
+                rev=rev*10+d;
+                k=k/10;
+            }
+            if(rev==k)
+            {
+                if(l<rev)
+                {
+                    l=rev;//121
+                }
+            }
+            d=0;
+            
+        }
+        System.out.println(""+l);
+    }
+}

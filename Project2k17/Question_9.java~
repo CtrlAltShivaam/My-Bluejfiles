@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Question_9
+{
+    static void main()
+    {
+        Scanner sc=new Scanner(System.in);
+        String a,b,p;
+        int x,y,l,co=0;
+        char c,ch;
+        System.out.println("Enter the First Word");
+        a=sc.nextLine();
+        System.out.println("Enter the Second Word");
+        b=sc.nextLine();
+        l=a.length();
+        for(x=0;x<l;x++)
+        {
+            c=a.charAt(x);
+            p=b;
+            for(y=0;y<p.length();y++)
+            {
+                ch=p.charAt(y);
+                if(c==ch)
+                {
+                    co=co+1;
+                }
+            }
+        }
+        if(co==l)
+        {
+            System.out.println("YES the second word is matching with the first one");
+        }
+        else
+        {
+            System.out.println("NO the second word is not matching with the first one");
+        }
+    }
+}
